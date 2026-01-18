@@ -30,7 +30,7 @@ resource "google_firebase_hosting_site" "default_site" {
 resource "google_firebase_hosting_site" "site" {
   provider = google-beta
   project  = var.google_project_id
-  site_id  = "kattakath-com"
+  site_id  = "corp-website"
 }
 
 resource "google_firebase_hosting_custom_domain" "custom_domain" {
