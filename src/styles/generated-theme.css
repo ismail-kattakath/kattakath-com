@@ -6,28 +6,28 @@
 
 @theme {
   /* === Colors === */
-  --color-primary: #0f172a;
-  --color-body: #ffffff;
-  --color-border: #e2e8f0;
-  --color-light: #f8fafc;
-  --color-dark: #020617;
-  --color-text: #475569;
-  --color-text-dark: #0f172a;
-  --color-text-light: #64748b;
+  --color-primary: #1E1E1E;
+  --color-body: #FFFFFF;
+  --color-border: #D9D9D9;
+  --color-light: #F5F5F5;
+  --color-dark: #383838;
+  --color-text: #1E1E1E;
+  --color-text-dark: #434343;
+  --color-text-light: #757575;
 
   /* === Darkmode Colors === */
-  --color-darkmode-primary: #f8fafc;
-  --color-darkmode-body: #0f172a;
-  --color-darkmode-border: #334155;
-  --color-darkmode-light: #1e293b;
-  --color-darkmode-dark: #f8fafc;
-  --color-darkmode-text: #cbd5e1;
-  --color-darkmode-text-dark: #f8fafc;
-  --color-darkmode-text-light: #94a3b8;
+  --color-darkmode-primary: #434343;
+  --color-darkmode-body: #1E1E1E;
+  --color-darkmode-border: #757575;
+  --color-darkmode-light: #383838;
+  --color-darkmode-dark: #FFFFFF;
+  --color-darkmode-text: #FFFFFF;
+  --color-darkmode-text-dark: #D9D9D9;
+  --color-darkmode-text-light: #B3B3B3;
 
   /* === Font Families === */
   --font-primary: Inter, sans-serif;
-  --font-secondary: Inter, sans-serif;
+  --font-secondary: Roboto Mono, monospace;
 
   /* === Font Sizes === */
   --text-base: 16px;
