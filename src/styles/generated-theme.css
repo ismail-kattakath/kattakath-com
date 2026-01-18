@@ -26,8 +26,8 @@
   --color-darkmode-text-light: #B3B3B3;
 
   /* === Font Families === */
-  --font-primary: Inter, sans-serif;
-  --font-secondary: Roboto Mono, monospace;
+  --font-primary: Google Sans, sans-serif;
+  --font-secondary: Google Sans, sans-serif;
 
   /* === Font Sizes === */
   --text-base: 16px;

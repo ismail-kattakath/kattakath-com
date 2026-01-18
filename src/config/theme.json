@@ -31,10 +31,10 @@
   },
   "fonts": {
     "font_family": {
-      "primary": "Inter:wght@400;600;700",
+      "primary": "Google+Sans:wght@400;500;600",
       "primary_type": "sans-serif",
-      "secondary": "Roboto Mono:wght@400;700",
-      "secondary_type": "monospace"
+      "secondary": "Google+Sans:wght@600;700",
+      "secondary_type": "sans-serif"
     },
     "font_size": {
       "base": "16",
