@@ -1,3 +1,5 @@
+# Terraform configuration for Firebase Hosting infrastructure
+# Manages Firebase sites and Cloudflare DNS records for kattakath.com
 terraform {
   required_providers {
     google-beta = {
