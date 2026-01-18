@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "kattakath-corp-website-9f781",
+    "site": "corp-website-cms",
     "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }

@@ -24,7 +24,7 @@ provider "cloudflare" {
 resource "google_firebase_hosting_site" "site" {
   provider = google-beta
   project  = var.google_project_id
-  site_id  = "kattakath-corp-website-9f781"
+  site_id  = "corp-website-cms"
 }
 
 resource "google_firebase_hosting_custom_domain" "custom_domain" {
