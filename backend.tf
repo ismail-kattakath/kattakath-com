@@ -3,7 +3,7 @@ terraform {
     organization = "kattakath-technologies-inc"
 
     workspaces {
-      name = "kattakath-com"
+      name = "corp-website"
     }
   }
 }
