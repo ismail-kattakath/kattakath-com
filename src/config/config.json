@@ -16,7 +16,7 @@
     "search": true,
     "sticky_header": true,
     "theme_switcher": true,
-    "default_theme": "system",
+    "default_theme": "light",
     "pagination": 6,
     "summary_length": 200,
     "blog_folder": "blog"
