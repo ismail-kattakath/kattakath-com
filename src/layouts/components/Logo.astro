@@ -23,14 +23,10 @@ const {
     src || logo ? (
       <ImageMod
         src={src ? src : logo}
-        class="inline-block"
+        class="inline-block max-w-35 md:max-w-50 h-auto"
         width={logo_width.replace("px", "") * 2}
         height={logo_height.replace("px", "") * 2}
         alt={title}
-        style={{
-          height: logo_height.replace("px", "") + "px",
-          width: logo_width.replace("px", "") + "px",
-        }}
         format="webp"
       />
     ) : logo_text ? (

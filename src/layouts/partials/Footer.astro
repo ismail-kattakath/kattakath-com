@@ -11,29 +11,29 @@ const { footer }: { footer: { name: string; url: string }[] } = menu;
 
 <footer class="bg-light dark:bg-darkmode-light">
   <div class="container">
-    <div class="row items-center py-10">
-      <div class="mb-8 text-center lg:col-3 lg:mb-0 lg:text-left [&_img]:grayscale [&_img]:opacity-70">
+    <div class="row items-center py-8 md:py-10">
+      <div class="mb-6 md:mb-8 text-center lg:col-3 lg:mb-0 lg:text-left [&_img]:grayscale [&_img]:opacity-70 [&_img]:max-w-28 [&_img]:md:max-w-35">
         <Logo />
       </div>
-      <div class="mb-8 text-center lg:col-6 lg:mb-0">
-        <ul>
+      <div class="mb-6 md:mb-8 text-center lg:col-6 lg:mb-0">
+        <ul class="flex flex-wrap justify-center gap-1">
           {
             footer.map((menu) => (
-              <li class="m-1 inline-block">
-                <a href={menu.url} class="text-text-dark dark:text-darkmode-text-dark hover:text-primary dark:hover:text-darkmode-primary hover:bg-body dark:hover:bg-darkmode-body px-3 py-2 rounded transition-colors">{menu.name}</a>
+              <li>
+                <a href={menu.url} class="text-text-dark dark:text-darkmode-text-dark hover:text-primary dark:hover:text-darkmode-primary hover:bg-body dark:hover:bg-darkmode-body px-2.5 py-1.5 md:px-3 md:py-2 rounded transition-colors text-sm md:text-base inline-block">{menu.name}</a>
               </li>
             ))
           }
         </ul>
       </div>
-      <div class="mb-8 text-center lg:col-3 lg:mb-0 lg:mt-0 lg:text-right">
+      <div class="text-center lg:col-3 lg:text-right">
         <Social source={social.main} className="social-icons" />
       </div>
     </div>
   </div>
-  <div class="border-t border-border py-7 dark:border-darkmode-border">
+  <div class="border-t border-border py-5 md:py-7 dark:border-darkmode-border">
     <div
-      class="container text-center text-text-light dark:text-darkmode-text-light"
+      class="container text-center text-text-light dark:text-darkmode-text-light text-xs md:text-sm"
     >
       <p set:html={markdownify(config.params.copyright)} />
     </div>

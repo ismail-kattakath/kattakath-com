@@ -29,26 +29,25 @@ const { pathname } = Astro.url;
       <Logo />
     </div>
     <!-- navbar toggler -->
-    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <input id="nav-toggle" type="checkbox" class="hidden peer" />
     <label
       for="nav-toggle"
-      class="order-3 cursor-pointer flex items-center justify-center lg:hidden text-text-dark dark:text-white lg:order-1 w-10 h-10 rounded-full hover:bg-light dark:hover:bg-darkmode-light transition-colors"
+      class="order-3 cursor-pointer flex items-center justify-center lg:hidden text-text-dark dark:text-white lg:order-1 w-11 h-11 rounded-full hover:bg-light dark:hover:bg-darkmode-light active:bg-light/80 dark:active:bg-darkmode-light/80 transition-colors"
+      aria-label="Toggle menu"
     >
-      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+      <svg id="show-button" class="h-5 w-5 fill-current block peer-checked:hidden" viewBox="0 0 24 24">
         <title>Menu Open</title>
-        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+        <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"></path>
       </svg>
-      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+      <svg id="hide-button" class="h-5 w-5 fill-current hidden peer-checked:block" viewBox="0 0 24 24">
         <title>Menu Close</title>
-        <polygon
-          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
-          transform="rotate(45 10 10)"></polygon>
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
       </svg>
     </label>
     <!-- /navbar toggler -->
     <ul
       id="nav-menu"
-      class="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8"
+      class="navbar-nav order-3 hidden w-full pt-4 pb-6 mt-4 border-t border-border dark:border-darkmode-border lg:border-0 lg:mt-0 lg:pt-0 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8"
     >
       {
         main.map((menu) => (
@@ -112,9 +111,9 @@ const { pathname } = Astro.url;
       }
       {
         navigation_button.enable && (
-          <li class="mt-4 inline-block lg:hidden">
+          <li class="mt-4 pt-4 border-t border-border dark:border-darkmode-border lg:hidden">
             <a
-              class="btn btn-outline-primary btn-sm"
+              class="btn btn-primary w-full text-center"
               href={navigation_button.link}
             >
               {navigation_button.label}
@@ -127,7 +126,7 @@ const { pathname } = Astro.url;
       {
         settings.search && (
           <button
-            class="text-text-dark hover:text-primary hover:bg-light dark:text-white dark:hover:text-darkmode-primary dark:hover:bg-darkmode-light mr-5 inline-flex items-center justify-center text-xl rounded-full w-10 h-10 transition-colors"
+            class="text-text-dark hover:text-primary hover:bg-light dark:text-white dark:hover:text-darkmode-primary dark:hover:bg-darkmode-light mr-2 md:mr-5 inline-flex items-center justify-center text-lg md:text-xl rounded-full w-9 h-9 md:w-10 md:h-10 transition-colors"
             aria-label="search"
             data-search-trigger
           >
@@ -135,7 +134,7 @@ const { pathname } = Astro.url;
           </button>
         )
       }
-      <ThemeSwitcher className="mr-5" />
+      <ThemeSwitcher className="mr-2 md:mr-5" />
       {
         navigation_button.enable && (
           <a

@@ -1,29 +1,29 @@
 /* section style */
 .section {
-  @apply py-24 xl:py-28;
+  @apply py-16 md:py-24 xl:py-28 overflow-x-hidden;
 }
 
 .section-sm {
-  @apply py-16 xl:py-20;
+  @apply py-12 md:py-16 xl:py-20 overflow-x-hidden;
 }
 
 /* container */
 .container {
-  @apply mx-auto xl:!max-w-[1320px] px-4;
+  @apply mx-auto xl:!max-w-[1320px] px-5 md:px-6;
 }
 
 /* social icons */
 .social-icons {
-  @apply space-x-4;
+  @apply space-x-2 md:space-x-3;
 }
 .social-icons li {
   @apply inline-block;
 }
 .social-icons li a {
-  @apply flex h-9 w-9 items-center justify-center rounded-full bg-brand-primary text-center leading-9 text-white hover:opacity-80 hover:scale-110 transition-all duration-200;
+  @apply flex h-8 w-8 md:h-9 md:w-9 items-center justify-center rounded-full bg-brand-primary text-center text-white hover:opacity-80 hover:scale-110 transition-all duration-200;
 }
 .social-icons li a svg {
-  @apply h-5 w-5;
+  @apply h-4 w-4 md:h-5 md:w-5;
 }
 
 /* notice */

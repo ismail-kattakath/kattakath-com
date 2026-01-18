@@ -1,9 +1,9 @@
 html {
-  @apply text-base-sm md:text-base scroll-smooth;
+  @apply text-base-sm md:text-base scroll-smooth overflow-x-hidden;
 }
 
 body {
-  @apply bg-body text-base font-primary font-normal leading-relaxed text-text;
+  @apply bg-body text-base font-primary font-normal leading-relaxed text-text overflow-x-hidden;
 }
 
 h1,
