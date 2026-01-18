@@ -4,7 +4,7 @@ terraform {
   required_providers {
     google-beta = {
       source  = "hashicorp/google-beta"
-      version = "5.2.0"
+      version = "~> 7.0"
     }
     cloudflare = {
       source  = "cloudflare/cloudflare"
@@ -27,9 +27,23 @@ resource "google_firebase_hosting_site" "site" {
   site_id  = "corp-website-cms"
 }
 
-# NOTE: Custom domain is managed via Firebase Console due to provider bug
-# See: https://github.com/hashicorp/terraform-provider-google/issues/xxxxx
-# Custom domain: kattakath.com -> corp-website-cms
+# Custom domains for Firebase Hosting
+resource "google_firebase_hosting_custom_domain" "root" {
+  provider     = google-beta
+  project      = var.google_project_id
+  site_id      = google_firebase_hosting_site.site.site_id
+  custom_domain = "kattakath.com"
+  wait_dns_verification = false
+}
+
+resource "google_firebase_hosting_custom_domain" "www" {
+  provider     = google-beta
+  project      = var.google_project_id
+  site_id      = google_firebase_hosting_site.site.site_id
+  custom_domain = "www.kattakath.com"
+  redirect_target = "kattakath.com"
+  wait_dns_verification = false
+}
 
 resource "cloudflare_record" "root_a" {
   zone_id = var.cloudflare_zone_id
@@ -38,6 +52,15 @@ resource "cloudflare_record" "root_a" {
   content = "199.36.158.100"
   proxied = false
   comment = "Firebase Hosting"
+}
+
+resource "cloudflare_record" "www_cname" {
+  zone_id = var.cloudflare_zone_id
+  name    = "www"
+  type    = "CNAME"
+  content = "kattakath.com"
+  proxied = false
+  comment = "Redirect www to root domain"
 }
 
 resource "cloudflare_record" "firebase_verification" {
