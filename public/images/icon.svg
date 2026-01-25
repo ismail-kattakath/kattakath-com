@@ -12,11 +12,12 @@
   <defs
      id="defs1" />
   <g
-     id="layer1">
+     id="layer1"
+     transform="matrix(3.7738713,0,0,3.7738713,0.02145119,0.02145124)">
     <g
        id="layer1-6"
        style="display:inline"
-       transform="scale(0.26458333)">
+       transform="scale(0.26457388)">
       <path
          id="rect2"
          style="display:inline;fill:#4485f4;fill-opacity:1;stroke-width:1.02719"
